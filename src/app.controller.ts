@@ -1,4 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import { Controller, Get, Post, Param, Body, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
