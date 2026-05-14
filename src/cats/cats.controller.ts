@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, Get } from '@nestjs/common';
 import { CatsService } from './cats.service';
 import { CreateCatDto } from './create-cat.dto';
 
@@ -11,5 +11,9 @@ export class CatsController {
     create(@Body() createCatDto: CreateCatDto) {
         this.catsService.create(createCatDto);
         return 'Cat created successfully';
+    }
+    @Get()
+    findAll() {
+        return 'All cats';
     }
 }
